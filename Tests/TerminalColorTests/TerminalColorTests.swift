@@ -2,14 +2,14 @@ import XCTest
 @testable import TerminalColor
 
 final class TerminalColorTests: XCTestCase {
-    let yellow = TerminalColor(1, 33)
-    let noColor = TerminalColor()
+    let yellow = TerminalStyle(1, 33)
+    let noColor = TerminalStyle()
     
     func testThatCodeGeneratesCorrectly() {
         XCTAssertEqual(yellow.command, "\u{001B}[1;33m")
         XCTAssertEqual(noColor.command, "\u{001B}[0m")
-        XCTAssertEqual(yellow, TerminalColor.yellow)
-        XCTAssertEqual(noColor, TerminalColor.noColor)
+        XCTAssertEqual(yellow, TerminalStyle.yellow)
+        XCTAssertEqual(noColor, TerminalStyle.noColor)
     }
     
     func testThatContentCanBeWrapped() {

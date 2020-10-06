@@ -11,7 +11,7 @@ import Foundation
 /// - Parameter text: The content to highlight
 /// - Parameter color: The terminal color to highlight with.
 /// - Returns: An instance of `ColorTerminalText` to add to `String` output
-public func highlight<Content: StringProtocol>(_ text: Content, with color: TerminalColor = .yellow) -> ColorTerminalText { ColorTerminalText(text, color: color) }
+public func highlight<Content: StringProtocol>(_ text: Content, with color: TerminalStyle = .yellow) -> ColorTerminalText { ColorTerminalText(text, color: color) }
 
 // Convenience functions for each preset color
 public func highlightYellow<Content: StringProtocol>(_ text: Content) -> ColorTerminalText { ColorTerminalText(text, color: .yellow) }

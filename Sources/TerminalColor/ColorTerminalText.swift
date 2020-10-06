@@ -12,14 +12,14 @@ public struct ColorTerminalText {
     public var text: String {
         didSet { updateOutput() }
     }
-    public var color: TerminalColor {
+    public var color: TerminalStyle {
         didSet { updateOutput() }
     }
     
     /// The generated output string for terminal
     public private(set) var output: String!
     
-    public init<Content: StringProtocol>(_ text: Content, color: TerminalColor = .noColor) {
+    public init<Content: StringProtocol>(_ text: Content, color: TerminalStyle = .noColor) {
         self.output = nil
         self.text = String(text)
         self.color = color
