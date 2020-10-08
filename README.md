@@ -1,3 +1,5 @@
+> **Note:** This package is deprecated: Use [TerminalTextStyler](https://github.com/reuschj/TerminalTextStyler) instead (it does the same thing, but it's a lot more capable).
+
 # TerminalColor
 
 If you are building a command-line tool with Swift, you may find it useful to highlight output in a color to make it stand out. Doing so, simply means wrapping your text in the necessary ANSI escape codes:
